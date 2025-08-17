@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Search Results</h1>
+
+    <section class="searched">
+      <h2>Your ingredients</h2>
+      {% if ingredients %}
+        <ul class="pill-list">
+          {% for ing in ingredients %}
+            <li class="pill">{{ ing }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No ingredients entered.</p>
+      {% endif %}
+    </section>
+
+    <section class="results">
+        <h2>Recipes</h2>
+        {% if recipes %}
+            <div class="grid">
+            {% for recipe in recipes %}
+                <div class="card">
+                <img src="{{ recipe.image }}" alt="{{ recipe.title }}">
+                <h3>{{ recipe.title }}</h3>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>No recipes found for the selected ingredients.</p>
+        {% endif %}
+    </section>
+  </div>
+</body>
+</html>

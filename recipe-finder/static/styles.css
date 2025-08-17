@@ -1,0 +1,68 @@
+/* Global dark theme */
+body {
+  background: #121212;
+  color: #f1f1f1;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Centered container */
+.container {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #333;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  width: 400px;
+  max-width: 95%;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #ffb347; /* Accent color */
+}
+
+/* Ingredient grid */
+.ingredients {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.ingredients input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #f1f1f1;
+}
+
+.ingredients input:focus {
+  outline: none;
+  border-color: #ffb347;
+  box-shadow: 0 0 5px #ffb347;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: #ffb347;
+  border: none;
+  border-radius: 6px;
+  color: #1e1e1e;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ff9234;
+}
